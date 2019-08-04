@@ -23,3 +23,10 @@ const getSleepHours = day => {
 //test to log hours on a given day
 console.log(getSleepHours('Monday'))
 
+
+//sums all hours for each day, calling getSleepHours function
+const getActualSleepHours = () => getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday') + getSleepHours('Sunday');
+
+//creates function to log idealHours multiplied by 7 days a week
+//sets parameter for input of idealHours
+const getIdealSleepHours = idealHours => idealHours * 7;
