@@ -30,3 +30,21 @@ const getActualSleepHours = () => getSleepHours('Monday') + getSleepHours('Tuesd
 //creates function to log idealHours multiplied by 7 days a week
 //sets parameter for input of idealHours
 const getIdealSleepHours = idealHours => idealHours * 7;
+
+//calculates sleep debt
+const calculateSleepDebt = () => {
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours(8);//passes parameter of idealHours for getIdealSleepHours function
+
+//if..else if statements log to console based on calculation of sleep hours to ideal hours   
+  if(actualSleepHours === idealSleepHours) {
+    console.log('You got the perfect amount of sleep!')
+  } else if(actualSleepHours > idealSleepHours) {
+    console.log('You got ' + (actualSleepHours - idealSleepHours) + ' more hours of sleep than you need. Stop being lazy!')
+  } else if(actualSleepHours < idealSleepHours) {
+    console.log('You got ' + (idealSleepHours - actualSleepHours) + ' hours less sleep than you need. Get some rest!')
+  }
+  
+}
+//calls sleep debt function
+calculateSleepDebt();
