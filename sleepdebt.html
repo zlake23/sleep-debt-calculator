@@ -1,0 +1,25 @@
+/*CALCULATE SLEEP DEBT*/
+
+//input number of hours slept each day
+//use of arrow function and switch statements
+const getSleepHours = day => {
+  switch(day) {
+    case 'Monday':
+      return 10;
+    case 'Tuesday':
+      return 8.5;
+    case 'Wednesday':
+      return 7.5;
+    case 'Thursday':
+      return 7;
+    case 'Friday':
+      return 8.5;
+    case 'Saturday':
+      return 9;
+    case 'Sunday':
+      return 7.5;
+  }
+}
+//test to log hours on a given day
+console.log(getSleepHours('Monday'))
+
